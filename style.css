@@ -12,7 +12,7 @@
 /*estilo de fuente general*/
 body {
     font-family: "lupa";
-    /*background-image: url(imagenes/imagenes-fondos/Fondo-casa2.jpg);*/
+    background-image: url(imagenes/imagenes-fondos/fondo-textura.jpg);
     background-size: cover;
 }
 
@@ -27,6 +27,11 @@ body {
     margin-right: 10px;
     margin-left: 10px;
     padding-bottom: 10px;
+
+}
+
+.boton-header {
+    background-color: gray;
 }
 
 .h1-logo {
@@ -37,27 +42,30 @@ body {
     border: 4px outset black;
     border-radius: 5px;
     backdrop-filter: blur(5px);
-    color: black;
+    color: beige;
     font-weight: bolder;
     font-size: 35px;
 }
 
 .enlace-logo {
     text-decoration: none;
-    color: black;
+
 }
 
 .container-fluid {
     font-size: 20px;
     font-weight: bold;
+
 }
 
 .nav-link {
     text-align: center;
+    color: beige;
 }
 
 .nav-link:hover {
     font-weight: bolder;
+    color: chocolate;
 }
 
 /*main | grid*/
@@ -196,6 +204,65 @@ main {
     display: none;
 }
 
+/*pagina servicios*/
+.grilla-pages-servicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    gap: 20px;
+}
+
+.servicio1 {
+    grid-area: servicio1;
+}
+
+.servicio2 {
+    grid-area: servicio2;
+}
+
+.servicio3 {
+    grid-area: servicio3;
+}
+
+.servicio4 {
+    grid-area: servicio4;
+}
+
+.servicio5 {
+    grid-area: servicio5;
+}
+
+.servicio6 {
+    grid-area: servicio6;
+}
+
+/*pagina inversiones*/
+.grilla-pages-inversiones {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "i1"
+        "i2"
+        "i3";
+    gap: 30px;
+}
+
+.inversion1 {
+    grid-area: i1;
+    justify-self: center;
+}
+
+.inversion2 {
+    grid-area: i2;
+    justify-self: center;
+}
+
+.inversion3 {
+    grid-area: i3;
+    justify-self: center;
+}
 
 /*estilos del footer*/
 footer {
@@ -292,7 +359,7 @@ footer {
 
     .card {
         height: 100%;
-        border: 4px outset white;
+        border: 4px outset black;
     }
 
     .card-img {
@@ -320,14 +387,19 @@ footer {
         flex-direction: column;
         font-weight: bolder;
         backdrop-filter: blur(8px);
-        border: 4px outset white;
+        border: 4px outset black;
         border-radius: 15px;
         padding: 10px;
         text-align: center;
         font-weight: bolder;
-        color: black;
         width: 92%;
+        justify-content: center;
     }
+
+    .parrafo p {
+        color: beige;
+    }
+
 
     .departamentos {
         display: none;
@@ -386,9 +458,11 @@ footer {
             "dpto4 dpto4";
         gap: 30px;
     }
+
     .dpto1 {
         height: auto;
     }
+
     .body1 {
         display: flex;
         flex-direction: column;
@@ -399,26 +473,68 @@ footer {
     .grilla-pages-quintas-mobile {
         display: none;
     }
+
     /*media query | paginas-quintas | desktop*/
     .grilla-pages-quintas-desktop {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto repeat(3, 1fr);
-        grid-template-areas: 
+        grid-template-areas:
             "texto-bienvenida texto-bienvenida"
             "quinta1 quinta1"
             "quinta2 quinta2"
             "quinta3 quinta3";
     }
+
     .quinta1 {
         grid-area: quinta1;
     }
+
     .quinta2 {
         grid-area: quinta2;
     }
+
     .quinta3 {
         grid-area: quinta3;
     }
+
+    /*media query | servicios*/
+    .grilla-pages-servicios {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "servicio1 servicio2 servicio3"
+            "servicio4 servicio5 servicio6";
+
+        width: 100%;
+    }
+
+    .seccion-servicios {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /*media query | inversiones*/
+    .grilla-pages-inversiones {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "i1 i2 i3";
+        width: 100%;
+    }
+
+    .seccion-inversiones {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+
 
     /*media query footer*/
     .footer-1 {
@@ -437,27 +553,27 @@ footer {
     }
 
     .footer-2 div h3 {
-        color: black;
+        color: beige;
         width: 100%;
     }
 
     .propietarios a {
-        color: black;
+        color: beige;
     }
 
     .info {
-        color: black;
+        color: beige;
     }
 
-@media screen and (min-width: 1024px) {
-    .encabezado {
-        height: auto;
-        gap: 50px;
-    }
-
-    .h1-logo {
-        text-align: center;
-        width: 100%;
-        height: auto;
+    @media screen and (min-width: 1024px) {
+        .encabezado {
+            height: auto;
+            gap: 50px;
         }
-}
+
+        .h1-logo {
+            text-align: center;
+            width: 100%;
+            height: auto;
+        }
+    }
