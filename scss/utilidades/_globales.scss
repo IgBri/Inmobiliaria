@@ -1,0 +1,16 @@
+/*Formato de letra determinado*/
+@font-face {
+    font-family: "lupa";
+    src: url(../font-family/Gruppo/Gruppo-Regular.ttf);
+}
+
+body {
+    font-family: "lupa";
+    background-image: url(../imagenes/imagenes-fondos/fondo-textura.jpg);
+    background-size: cover;
+}
+
+main {
+    position: relative;
+    top: 35px;
+}

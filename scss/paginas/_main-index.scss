@@ -1,0 +1,63 @@
+main {
+    section {
+        .grilla {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "casas"
+                "dptos"
+                "quintas";
+            justify-items: center;
+            .parrafo {
+                display: none;
+                grid-area: texto-bienvenida;
+            }
+            .cards {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                width: 90%;
+                height: 100%;
+                .card {
+                    width: 100%;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+                    .card-img-overlay {
+                        display: flex;
+                        flex-direction: column;
+                        .card-title {
+                            font-weight: bolder;
+                            letter-spacing: 2px;
+                            .h5-enlace {
+                                text-decoration: none;
+                                color: black;
+                                font-weight: bolder;
+                                font-size: 30px;
+                            }
+                        }
+                        .card-text-index {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .casas {
+                grid-area: casas;
+                align-items: flex-start;
+            }
+            .departamentos {
+                grid-area: dptos;
+            }
+            .departamentos-2 {
+                display: none;
+                grid-area: dptos-2;
+            }
+            
+            .quintas {
+                grid-area: quintas;
+            }
+        }
+    }
+}

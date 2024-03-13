@@ -1,0 +1,50 @@
+/*header*/
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    border-bottom: 4px outset black;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+    .logo-header {
+        .h1-logo {
+            text-align: center;
+            width: 100%;
+            padding: 15px;
+            font-weight: bolder;
+            border: 4px outset black;
+            border-radius: 5px;
+            backdrop-filter: blur(5px);
+            color: beige;
+            font-weight: bolder;
+            font-size: 35px;
+        }
+    }
+    nav {
+        .container-fluid {
+            font-size: 20px;
+            font-weight: bold;
+            .boton-header {
+                background-color: gray;
+            }
+            div {
+                ul {
+                    li {
+                        .nav-link {
+                            text-align: center;
+                            color: beige;
+                            &:hover {
+                                font-weight: bolder;
+                                color: chocolate;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
