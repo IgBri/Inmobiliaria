@@ -1,0 +1,111 @@
+//Footer
+footer {
+    position: relative;
+    top: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+    /*.footer-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        .boton-nosotros {
+            align-self: center;
+            position: relative;
+            top: 15px;
+        }
+        .nosotros-desplegable {
+            align-self: center;
+            div {
+                div {
+                    .footer {
+                        .conocenos {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-self: start;
+                            .propietarios {
+                                display: flex;
+                                flex-direction: column;
+                                a {
+                                    text-decoration: none;
+                                    font-weight: bolder;
+                                    color: black;
+                                }
+                                .info {
+                                    font-weight: bolder;
+                                    color: black;
+                                }
+                            }
+                        }
+                        .contacto {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .propietarios {
+                                display: flex;
+                                flex-direction: column;
+                                .info {
+                                    font-weight: bolder;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .iframe {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            height: 300px;
+            align-self: center;
+            border-radius: 30px;
+            border: $bordes;
+        }
+    }
+    .footer-2 {
+        display: none;
+    }*/
+    .footer-2 {
+        display: flex;
+        backdrop-filter: blur(5px);
+        padding: 15px;
+        border: $bordes;
+        flex-direction: column;
+        div {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h3 {
+                color: beige;
+            }
+        }
+        .conocenos {
+            width: 100%;
+            .propietarios {
+                display: flex;
+                flex-direction: column;
+                a {
+                    color: beige;
+                    text-decoration: none;
+                }
+            }
+        }
+        .contacto {
+            width: 100%;
+            h3 {
+                color: beige;
+            }
+            .propietarios {
+                display: flex;
+                flex-direction: column;
+                .info {
+                    color: beige;
+                }
+            }
+        }
+    }
+}

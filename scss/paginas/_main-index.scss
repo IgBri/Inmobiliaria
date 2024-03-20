@@ -24,6 +24,7 @@ main {
                     border-radius: 15px;
                     overflow: hidden;
                     box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+                    border: $bordes;
                     .card-img-overlay {
                         display: flex;
                         flex-direction: column;
@@ -54,7 +55,6 @@ main {
                 display: none;
                 grid-area: dptos-2;
             }
-            
             .quintas {
                 grid-area: quintas;
             }

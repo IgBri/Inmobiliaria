@@ -1,0 +1,712 @@
+/*VARIABLES son pares de clave-valor*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Formato de letra determinado*/
+@font-face {
+  font-family: "lupa";
+  src: url(../font-family/Gruppo/Gruppo-Regular.ttf);
+}
+body {
+  font-family: "lupa";
+  background-image: url(../../imagenes/imagenes-fondos/fondo-edificio.jpg);
+  background-size: cover;
+}
+
+main {
+  position: relative;
+  top: 35px;
+}
+
+/*Media Querie*/
+@media screen and (min-width: 768px) {
+  body .encabezado {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  body .encabezado .logo-header .h1-logo {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+  }
+  body main section .grilla {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas: "texto-bienvenida texto-bienvenida" "casas dptos-2" "quintas dptos-2";
+    gap: 20px;
+    justify-items: center;
+    align-items: flex-end;
+  }
+  body main section .grilla .parrafo {
+    display: flex;
+    font-weight: bolder;
+    backdrop-filter: blur(8px);
+    border: 4px outset brown;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 92%;
+    justify-content: center;
+    /*display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    backdrop-filter: blur(8px);
+    border: $bordes;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    width: 92%;
+    justify-content: center;*/
+  }
+  body main section .grilla .parrafo p {
+    color: beige;
+  }
+  body main section .grilla .cards {
+    width: 85%;
+  }
+  body main section .grilla .cards .card {
+    height: 100%;
+    border: 4px outset brown;
+  }
+  body main section .grilla .cards .card .card-img {
+    height: 100%;
+  }
+  body main section .grilla .cards .card .card-img-overlay .card-text-index {
+    display: none;
+  }
+  body main section .grilla .cards .card .card-img-overlay:hover {
+    backdrop-filter: blur(5px);
+    color: black;
+    font-weight: bolder;
+  }
+  body main section .grilla .cards .card .card-img-overlay:hover .card-text-index {
+    display: flex;
+  }
+  body main section .grilla .departamentos {
+    display: none;
+  }
+  body main section .grilla .departamentos-2 {
+    display: flex;
+    height: 100%;
+  }
+  body main .grilla-pages {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(2, 1fr);
+    grid-template-areas: "texto-bienvenida texto-bienvenida" "casa1 casa2" "casa3 casa4";
+  }
+  body main .grilla-pages .parrafo {
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    backdrop-filter: blur(8px);
+    border: 4px outset brown;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    width: 92%;
+    justify-content: center;
+  }
+  body main .grilla-pages .parrafo p {
+    color: beige;
+  }
+  body main .grilla-pages .casa1 {
+    grid-area: casa1;
+  }
+  body main .grilla-pages .casa2 {
+    grid-area: casa2;
+  }
+  body main .grilla-pages .casa3 {
+    grid-area: casa3;
+  }
+  body main .grilla-pages .casa4 {
+    grid-area: casa4;
+  }
+  body main .grilla-pages .card-pages {
+    width: 85%;
+    justify-items: center;
+    border: 4px outset brown;
+  }
+  body main .grilla-pages-dptos-mobile {
+    display: none;
+  }
+  body main .grilla-pages-dptos-desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "texto-bienvenida texto-bienvenida" "dpto1 dpto2" "dpto1 dpto3" "dpto4 dpto4";
+    gap: 30px;
+    justify-items: center;
+  }
+  body main .grilla-pages-dptos-desktop .parrafo {
+    grid-area: texto-bienvenida;
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    backdrop-filter: blur(8px);
+    border: 4px outset brown;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    width: 92%;
+    justify-content: center;
+  }
+  body main .grilla-pages-dptos-desktop .parrafo p {
+    color: beige;
+  }
+  body main .grilla-pages-dptos-desktop .dpto1 {
+    grid-area: dpto1;
+  }
+  body main .grilla-pages-dptos-desktop .dpto2 {
+    grid-area: dpto2;
+  }
+  body main .grilla-pages-dptos-desktop .dpto3 {
+    grid-area: dpto3;
+  }
+  body main .grilla-pages-dptos-desktop .dpto4 {
+    grid-area: dpto4;
+  }
+  body main .grilla-pages-dptos-desktop .card-pages {
+    border: 4px outset brown;
+    width: 80%;
+    border-radius: 15px;
+  }
+  body main .grilla-pages-quintas-mobile {
+    display: none;
+  }
+  body main .grilla-pages-quintas-desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(3, 1fr);
+    grid-template-areas: "texto-bienvenida texto-bienvenida" "quinta1 ." ". quinta2" "quinta3 .";
+    justify-items: center;
+    gap: 30px;
+  }
+  body main .grilla-pages-quintas-desktop .parrafo {
+    grid-area: texto-bienvenida;
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    backdrop-filter: blur(8px);
+    border: 4px outset brown;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    width: 92%;
+    justify-content: center;
+  }
+  body main .grilla-pages-quintas-desktop .parrafo p {
+    color: beige;
+  }
+  body main .grilla-pages-quintas-desktop .quinta1 {
+    grid-area: quinta1;
+    width: 80%;
+  }
+  body main .grilla-pages-quintas-desktop .quinta2 {
+    grid-area: quinta2;
+    width: 80%;
+  }
+  body main .grilla-pages-quintas-desktop .quinta3 {
+    grid-area: quinta3;
+    width: 80%;
+  }
+  body main .grilla-pages-servicios {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto repeat(2, 1fr);
+    grid-template-areas: "texto-bienvenida texto-bienvenida texto-bienvenida" "servicio1 servicio2 servicio3" "servicio4 servicio5 servicio6";
+    width: 100%;
+  }
+  body main .grilla-pages-servicios .parrafo {
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    backdrop-filter: blur(8px);
+    border: 4px outset black;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    width: 92%;
+    justify-content: center;
+  }
+  body main .grilla-pages-servicios .parrafo p {
+    color: beige;
+  }
+  body main .grilla-pages-servicios .servicio1 {
+    grid-area: servicio1;
+  }
+  body main .grilla-pages-servicios .servicio2 {
+    grid-area: servicio2;
+  }
+  body main .grilla-pages-servicios .servicio3 {
+    grid-area: servicio3;
+  }
+  body main .grilla-pages-servicios .servicio4 {
+    grid-area: servicio4;
+  }
+  body main .grilla-pages-servicios .servicio5 {
+    grid-area: servicio5;
+  }
+  body main .grilla-pages-servicios .servicio6 {
+    grid-area: servicio6;
+  }
+  body main .seccion-inversiones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  body main .seccion-inversiones .parrafo {
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    backdrop-filter: blur(8px);
+    border: 4px outset black;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    width: 92%;
+    justify-content: center;
+  }
+  body main .seccion-inversiones .parrafo p {
+    color: beige;
+  }
+  body main .seccion-inversiones .grilla-pages-inversiones {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "i1 i2 i3";
+    width: 100%;
+    padding: 15px;
+  }
+  body footer {
+    position: relative;
+    top: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+    /*.footer-1 {
+        display: none;
+    }*/
+  }
+  body footer .footer-2 {
+    display: flex;
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    border: 4px outset brown;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  body footer .footer-2 .conocenos {
+    width: 100%;
+  }
+  body footer .footer-2 .conocenos h3 {
+    color: beige;
+    width: 100%;
+    height: 100%;
+  }
+  body footer .footer-2 .conocenos .propietarios {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  body footer .footer-2 .conocenos .propietarios a {
+    color: beige;
+    text-decoration: none;
+    width: 100%;
+    align-self: start;
+  }
+  body footer .footer-2 .contacto {
+    width: 100%;
+  }
+  body footer .footer-2 .contacto h3 {
+    color: beige;
+    width: 100%;
+  }
+  body footer .footer-2 .contacto .propietarios {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  body footer .footer-2 .contacto .propietarios .info {
+    color: beige;
+    width: 100%;
+    position: relative;
+    left: 0px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body .encabezado {
+    height: auto;
+    gap: 50px;
+  }
+  body .encabezado .logo-header .h1-logo {
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }
+}
+/*header*/
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  border-bottom: 4px outset black;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+.encabezado .logo-header .h1-logo {
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+  font-weight: bolder;
+  border: 4px outset brown;
+  border-radius: 0px 0px 50px 0px;
+  backdrop-filter: blur(5px);
+  color: beige;
+  font-weight: bolder;
+  font-size: 35px;
+}
+.encabezado nav .container-fluid {
+  font-size: 20px;
+  font-weight: bold;
+}
+.encabezado nav .container-fluid .boton-header {
+  background-color: gray;
+}
+.encabezado nav .container-fluid div ul li .nav-link {
+  text-align: center;
+  color: beige;
+}
+.encabezado nav .container-fluid div ul li .nav-link:hover {
+  font-weight: bolder;
+  color: chocolate;
+}
+
+footer {
+  position: relative;
+  top: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  /*.footer-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+      .boton-nosotros {
+          align-self: center;
+          position: relative;
+          top: 15px;
+      }
+      .nosotros-desplegable {
+          align-self: center;
+          div {
+              div {
+                  .footer {
+                      .conocenos {
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                          justify-self: start;
+                          .propietarios {
+                              display: flex;
+                              flex-direction: column;
+                              a {
+                                  text-decoration: none;
+                                  font-weight: bolder;
+                                  color: black;
+                              }
+                              .info {
+                                  font-weight: bolder;
+                                  color: black;
+                              }
+                          }
+                      }
+                      .contacto {
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                          .propietarios {
+                              display: flex;
+                              flex-direction: column;
+                              .info {
+                                  font-weight: bolder;
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+      .iframe {
+          display: flex;
+          justify-content: center;
+          width: 80%;
+          height: 300px;
+          align-self: center;
+          border-radius: 30px;
+          border: $bordes;
+      }
+  }
+  .footer-2 {
+      display: none;
+  }*/
+}
+footer .footer-2 {
+  display: flex;
+  backdrop-filter: blur(5px);
+  padding: 15px;
+  border: 4px outset brown;
+  flex-direction: column;
+}
+footer .footer-2 div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer .footer-2 div h3 {
+  color: beige;
+}
+footer .footer-2 .conocenos {
+  width: 100%;
+}
+footer .footer-2 .conocenos .propietarios {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-2 .conocenos .propietarios a {
+  color: beige;
+  text-decoration: none;
+}
+footer .footer-2 .contacto {
+  width: 100%;
+}
+footer .footer-2 .contacto h3 {
+  color: beige;
+}
+footer .footer-2 .contacto .propietarios {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-2 .contacto .propietarios .info {
+  color: beige;
+}
+
+main section .grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "casas" "dptos" "quintas";
+  justify-items: center;
+}
+main section .grilla .parrafo {
+  display: none;
+  grid-area: texto-bienvenida;
+}
+main section .grilla .cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 90%;
+  height: 100%;
+}
+main section .grilla .cards .card {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+  border: 4px outset brown;
+}
+main section .grilla .cards .card .card-img-overlay {
+  display: flex;
+  flex-direction: column;
+}
+main section .grilla .cards .card .card-img-overlay .card-title {
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+main section .grilla .cards .card .card-img-overlay .card-title .h5-enlace {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-size: 30px;
+}
+main section .grilla .cards .card .card-img-overlay .card-text-index {
+  display: none;
+}
+main section .grilla .casas {
+  grid-area: casas;
+  align-items: flex-start;
+}
+main section .grilla .departamentos {
+  grid-area: dptos;
+}
+main section .grilla .departamentos-2 {
+  display: none;
+  grid-area: dptos-2;
+}
+main section .grilla .quintas {
+  grid-area: quintas;
+}
+
+/*Enlace H1 del HEADER*/
+.encabezado .logo-header .enlace-logo {
+  text-decoration: none;
+}
+
+/*MAIN de la pagina Casas*/
+.grilla-pages {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
+}
+.grilla-pages .parrafo {
+  display: none;
+  grid-area: texto-bienvenida;
+}
+.grilla-pages .card-pages {
+  width: 75%;
+}
+.grilla-pages .card-body {
+  height: auto;
+}
+
+/*Enlace H1 del HEADER*/
+.encabezado .logo-header .enlace-logo {
+  text-decoration: none;
+}
+
+/*MAIN de la pagina Departamentos*/
+.main .grilla-pages-dptos-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "dpto1" "dpto2" "dpto3" "dpto4";
+  justify-items: center;
+  width: 80%;
+}
+.main .grilla-pages-dptos-mobile .card-pages {
+  width: 80%;
+}
+.main .grilla-pages-dptos-mobile .dpto1 {
+  grid-area: dpto1;
+}
+.main .grilla-pages-dptos-mobile .dpto2 {
+  grid-area: dpto2;
+}
+.main .grilla-pages-dptos-mobile .dpto3 {
+  grid-area: dpto3;
+}
+.main .grilla-pages-dptos-mobile .dpto4 {
+  grid-area: dpto4;
+}
+.main .grilla-pages-dptos-desktop {
+  display: none;
+}
+
+/*Enlace H1 del HEADER*/
+.encabezado .logo-header .enlace-logo {
+  text-decoration: none;
+}
+
+/*MAIN de la pagina Quintas*/
+.grilla-pages-quintas-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  gap: 30px;
+}
+.grilla-pages-quintas-mobile .card-q {
+  width: 70%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+  background-color: white;
+}
+.grilla-pages-quintas-mobile .card-q img {
+  width: 100%;
+}
+.grilla-pages-quintas-mobile .card-q .card-body {
+  padding: 10px;
+}
+.grilla-pages-quintas-mobile .card-q .card-body .precio {
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.grilla-pages-quintas-desktop {
+  display: none;
+}
+
+/*Enlace H1 del HEADER*/
+.encabezado .logo-header .enlace-logo {
+  text-decoration: none;
+}
+
+/*MAIN de la pagina Servicios*/
+.grilla-pages-servicios {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto repeat(6, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+.grilla-pages-servicios .parrafo {
+  display: none;
+  grid-area: texto-bienvenida;
+}
+
+/*Enlace H1 del HEADER*/
+.encabezado .logo-header .enlace-logo {
+  text-decoration: none;
+}
+
+/*MAIN de la pagina Inversiones*/
+main .seccion-inversiones .parrafo {
+  display: none;
+}
+main .seccion-inversiones .grilla-pages-inversiones {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "i1" "i2" "i3";
+  gap: 30px;
+}
+main .seccion-inversiones .grilla-pages-inversiones .card {
+  width: 80%;
+}
+main .seccion-inversiones .grilla-pages-inversiones .card .card-body .card-title {
+  color: brown;
+  font-weight: bolder;
+}
+main .seccion-inversiones .grilla-pages-inversiones .inversion1 {
+  grid-area: i1;
+  justify-self: center;
+}
+main .seccion-inversiones .grilla-pages-inversiones .inversion2 {
+  grid-area: i2;
+  justify-self: center;
+}
+main .seccion-inversiones .grilla-pages-inversiones .inversion3 {
+  grid-area: i3;
+  justify-self: center;
+}
+
+/*# sourceMappingURL=main.css.map */

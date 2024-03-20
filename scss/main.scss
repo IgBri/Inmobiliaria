@@ -1,4 +1,15 @@
+@import "utilidades/variables";
+@import "utilidades/mixin";
 @import "utilidades/reseat";
 @import "utilidades/globales";
+@import "utilidades/media-queries";
 
 @import "componentes/header"; 
+@import "componentes/footer";
+
+@import "paginas/main-index";
+@import "paginas/main-casas";
+@import "paginas/main-departamentos";
+@import "paginas/main-quintas";
+@import "paginas/main-nuestros-servicios";
+@import "paginas/main-inversiones";

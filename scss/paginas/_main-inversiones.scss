@@ -6,3 +6,47 @@
         }
     }
 }
+/*MAIN de la pagina Inversiones*/
+main {
+    .seccion-inversiones {
+        .parrafo {
+            display: none;
+        }
+        .grilla-pages-inversiones {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "i1"
+                "i2"
+                "i3";
+            gap: 30px;
+            .card {
+                width: 80%;
+                .card-body {
+                    .card-title {
+                        color: nth($list: $color-fuente, $n: 3);
+                        font-weight: bolder;
+                    }
+                    .card-text {
+                        
+                    }
+                }
+            }
+            .inversion1 {
+                grid-area: i1;
+                justify-self: center;
+            }
+            
+            .inversion2 {
+                grid-area: i2;
+                justify-self: center;
+            }
+            
+            .inversion3 {
+                grid-area: i3;
+                justify-self: center;
+            }
+        }
+    }
+}

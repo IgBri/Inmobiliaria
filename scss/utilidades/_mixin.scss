@@ -1,0 +1,11 @@
+@mixin parrafo($font-weight, $backdrop-filter, $border, $border-radius, $padding, $text-align, $width, $justify-content){
+    display: flex;
+    font-weight: $font-weight;
+    backdrop-filter: $backdrop-filter;
+    border: $border;
+    border-radius: $border-radius;
+    padding: $padding;
+    text-align: $text-align;
+    width: $width;
+    justify-content: $justify-content;
+} 

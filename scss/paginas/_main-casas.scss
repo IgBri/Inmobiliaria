@@ -6,3 +6,23 @@
         }
     }
 }
+
+/*MAIN de la pagina Casas*/
+
+.grilla-pages {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center;
+    .parrafo {
+        display: none;
+        grid-area: texto-bienvenida;
+    } 
+    .card-pages {
+        width: 75%;
+    }
+    .card-body {
+        height: auto;
+    }
+}

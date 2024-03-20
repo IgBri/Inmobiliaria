@@ -6,3 +6,18 @@
         }
     }
 }
+
+/*MAIN de la pagina Servicios*/
+
+
+.grilla-pages-servicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto repeat(6, 1fr);
+    gap: 20px;
+    justify-items: center;
+    .parrafo {
+        display: none;
+        grid-area: texto-bienvenida;
+    }
+}
