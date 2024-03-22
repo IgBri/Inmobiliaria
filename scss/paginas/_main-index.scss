@@ -10,8 +10,7 @@ main {
                 "quintas";
             justify-items: center;
             .parrafo {
-                display: none;
-                grid-area: texto-bienvenida;
+                @extend %parrafo;
             }
             .cards {
                 display: flex;
@@ -29,13 +28,9 @@ main {
                         display: flex;
                         flex-direction: column;
                         .card-title {
-                            font-weight: bolder;
-                            letter-spacing: 2px;
                             .h5-enlace {
+                                @extend %font-card;
                                 text-decoration: none;
-                                color: black;
-                                font-weight: bolder;
-                                font-size: 30px;
                             }
                         }
                         .card-text-index {

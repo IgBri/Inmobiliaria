@@ -5,14 +5,14 @@ main .grilla-pages-inversiones .parrafo, .grilla-pages-quintas .parrafo, main .g
   width: 100%;
 }
 
-main .grilla-pages-inversiones .card .card-body .card-title, .grilla-pages-servicios .card .card-title, main .grilla-pages-dptos .card-pages .card-body .card-title, .grilla-pages .card-pages .card-body .card-title, main section .grilla .cards .card .card-img-overlay .card-title .h5-enlace {
+main .grilla-pages-inversiones .card .card-body .card-title, main .grilla-pages-dptos .card-pages .card-body .card-title, .grilla-pages .card-pages .card-body .card-title, main section .grilla .cards .card .card-img-overlay .card-title .h5-enlace {
   font-weight: bolder;
   color: brown;
-  font-size: 25px;
+  font-size: 30px;
   letter-spacing: 2px;
 }
 
-main .grilla-pages-inversiones .card .list-group li, main .grilla-pages-inversiones .card .card-body .card-text, .grilla-pages-servicios .card .card-body, main .grilla-pages-dptos .card-pages .card-body .card-text, .grilla-pages .card-pages .card-body .card-text {
+main .grilla-pages-inversiones .card .list-group li, main .grilla-pages-inversiones .card .card-body .card-text, main .grilla-pages-dptos .card-pages .card-body .card-text, .grilla-pages .card-pages .card-body .card-text {
   color: black;
   font-weight: bolder;
 }
@@ -344,7 +344,6 @@ main .grilla-pages-dptos .dpto4 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto repeat(6, 1fr);
-  grid-template-areas: "texto-bienvenida" "servicio1" "servicio2" "servicio3" "servicio4" "servicio5" "servicio6";
   gap: 20px;
   justify-items: center;
 }
@@ -352,28 +351,11 @@ main .grilla-pages-dptos .dpto4 {
   display: none;
   grid-area: texto-bienvenida;
 }
-.grilla-pages-servicios .servicio1 {
-  grid-area: servicio1;
-}
-.grilla-pages-servicios .servicio2 {
-  grid-area: servicio2;
-}
-.grilla-pages-servicios .servicio3 {
-  grid-area: servicio3;
-}
-.grilla-pages-servicios .servicio4 {
-  grid-area: servicio4;
-}
-.grilla-pages-servicios .servicio5 {
-  grid-area: servicio5;
-}
-.grilla-pages-servicios .servicio6 {
-  grid-area: servicio6;
-}
 .grilla-pages-servicios .card {
   border: 4px outset brown;
   width: 85%;
 }
+
 /*Enlace H1 del HEADER*/
 .encabezado .logo-header .enlace-logo {
   text-decoration: none;
@@ -579,6 +561,24 @@ main .grilla-pages-inversiones .inversion3 {
   body main .grilla-pages-servicios .card {
     width: 90%;
   }
+  body main .grilla-pages-servicios .servicio1 {
+    grid-area: servicio1;
+  }
+  body main .grilla-pages-servicios .servicio2 {
+    grid-area: servicio2;
+  }
+  body main .grilla-pages-servicios .servicio3 {
+    grid-area: servicio3;
+  }
+  body main .grilla-pages-servicios .servicio4 {
+    grid-area: servicio4;
+  }
+  body main .grilla-pages-servicios .servicio5 {
+    grid-area: servicio5;
+  }
+  body main .grilla-pages-servicios .servicio6 {
+    grid-area: servicio6;
+  }
   body main .grilla-pages-inversiones {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 1fr;
@@ -671,4 +671,4 @@ main .grilla-pages-inversiones .inversion3 {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=maincss.map */

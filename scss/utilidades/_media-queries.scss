@@ -16,6 +16,7 @@
         }
 
         main {
+
             // MAIN del index
             section {
                 .grilla {
@@ -30,29 +31,14 @@
                     align-items: flex-end;
                     .parrafo {
                         @include parrafo(bolder, blur(8px), 4px outset brown, 15px, 10px, center, 92%, center);
-                        /*display: flex;
-                        flex-direction: column;
-                        font-weight: bolder;
-                        backdrop-filter: blur(8px);
-                        border: $bordes;
-                        border-radius: 15px;
-                        padding: 10px;
-                        text-align: center;
-                        font-weight: bolder;
-                        width: 92%;
-                        justify-content: center;*/
-
                         p {
                             color: beige;
                         }
                     }
-
                     .cards {
                         width: 85%;
-
                         .card {
                             height: 100%;
-                            border: $bordes;
 
                             .card-img {
                                 height: 100%;
@@ -67,6 +53,7 @@
                                     backdrop-filter: blur(5px);
                                     color: black;
                                     font-weight: bolder;
+
                                     .card-text-index {
                                         display: flex;
                                     }
@@ -96,18 +83,7 @@
                     "casa3 casa4";
 
                 .parrafo {
-                    display: flex;
-                    flex-direction: column;
-                    font-weight: bolder;
-                    backdrop-filter: blur(8px);
-                    border: $bordes;
-                    border-radius: 15px;
-                    padding: 10px;
-                    text-align: center;
-                    font-weight: bolder;
-                    width: 92%;
-                    justify-content: center;
-
+                    @include parrafo(bolder, blur(8px), 4px outset brown, 15px, 10px, center, 92%, center);
                     p {
                         color: beige;
                     }
@@ -132,16 +108,11 @@
                 .card-pages {
                     width: 85%;
                     justify-items: center;
-                    border: $bordes;
                 }
             }
 
             //MAIN de Departamentos
-            .grilla-pages-dptos-mobile {
-                display: none;
-            }
-
-            .grilla-pages-dptos-desktop {
+            .grilla-pages-dptos {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(4, auto);
@@ -154,18 +125,8 @@
                 justify-items: center;
 
                 .parrafo {
-                    grid-area: texto-bienvenida;
-                    display: flex;
-                    flex-direction: column;
-                    font-weight: bolder;
-                    backdrop-filter: blur(8px);
-                    border: $bordes;
-                    border-radius: 15px;
-                    padding: 10px;
-                    text-align: center;
-                    font-weight: bolder;
-                    width: 92%;
-                    justify-content: center;
+                    @include parrafo(bolder, blur(8px), 4px outset brown, 15px, 10px, center, 92%, center);
+
 
                     p {
                         color: beige;
@@ -191,60 +152,22 @@
                 .card-pages {
                     border: $bordes;
                     width: 80%;
-                    border-radius: 15px;
                 }
             }
 
             //MAIN de Quintas
-            .grilla-pages-quintas-mobile {
-                display: none;
-            }
-
-            .grilla-pages-quintas-desktop {
+            .grilla-pages-quintas {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: auto repeat(3, 1fr);
-                grid-template-areas:
-                    "texto-bienvenida texto-bienvenida"
-                    "quinta1 ."
-                    ". quinta2"
-                    "quinta3 .";
-                justify-items: center;
-                gap: 30px;
-                
-
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: auto 1fr;
+                grid-template-areas: 
+                    "texto-bienvenida texto-bienvenida texto-bienvenida"
+                    "quinta1 quinta2 quinta3";
                 .parrafo {
-                    grid-area: texto-bienvenida;
-                    display: flex;
-                    flex-direction: column;
-                    font-weight: bolder;
-                    backdrop-filter: blur(8px);
-                    border: $bordes;
-                    border-radius: 15px;
-                    padding: 10px;
-                    text-align: center;
-                    font-weight: bolder;
-                    width: 92%;
-                    justify-content: center;
-
+                    @include parrafo(bolder, blur(8px), 4px outset brown, 15px, 10px, center, 92%, center);
                     p {
                         color: beige;
                     }
-                }
-
-                .quinta1 {
-                    grid-area: quinta1;
-                    width: 80%;
-                }
-
-                .quinta2 {
-                    grid-area: quinta2;
-                    width: 80%;
-                }
-
-                .quinta3 {
-                    grid-area: quinta3;
-                    width: 80%;
                 }
             }
 
@@ -257,74 +180,41 @@
                     "servicio1 servicio2 servicio3"
                     "servicio4 servicio5 servicio6";
                 width: 100%;
+
                 .parrafo {
-                    display: flex;
-                    flex-direction: column;
-                    font-weight: bolder;
-                    backdrop-filter: blur(8px);
-                    border: 4px outset black;
-                    border-radius: 15px;
-                    padding: 10px;
-                    text-align: center;
-                    font-weight: bolder;
-                    width: 92%;
-                    justify-content: center;
+                    @include parrafo(bolder, blur(8px), 4px outset brown, 15px, 10px, center, 92%, center);
+
                     p {
                         color: beige;
                     }
                 }
-                .servicio1 {
-                    grid-area: servicio1;
-                }
-                .servicio2 {
-                    grid-area: servicio2;
-                }
-                .servicio3 {
-                    grid-area: servicio3;
-                }
-                .servicio4 {
-                    grid-area: servicio4;
-                }
-                .servicio5 {
-                    grid-area: servicio5;
-                }
-                .servicio6 {
-                    grid-area: servicio6;
+                .card {
+                    width: 90%;
                 }
             }
+
             //MAIN de Inverisones
-            .seccion-inversiones {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
+            .grilla-pages-inversiones {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: auto 1fr;
+                grid-template-areas:
+                    "texto-bienvenida texto-bienvenida texto-bienvenida"
+                    "i1 i2 i3";
+                padding: 15px;
+
                 .parrafo {
-                    display: flex;
-                    flex-direction: column;
-                    font-weight: bolder;
-                    backdrop-filter: blur(8px);
-                    border: 4px outset black;
-                    border-radius: 15px;
-                    padding: 10px;
-                    text-align: center;
-                    font-weight: bolder;
-                    width: 92%;
-                    justify-content: center;
+                    @include parrafo(bolder, blur(8px), 4px outset brown, 15px, 10px, center, 92%, center);
+
                     p {
                         color: beige;
                     }
                 }
-                .grilla-pages-inversiones {
-                    grid-template-columns: repeat(3, 1fr);
-                    grid-template-rows: 1fr;
-                    grid-template-areas:
-                        "i1 i2 i3";
-                    width: 100%;
-                    padding: 15px;
+                .card {
+                    width: 95%;
                 }
             }
         }
+
         footer {
             position: relative;
             top: 100px;
@@ -334,7 +224,7 @@
             /*.footer-1 {
                 display: none;
             }*/
-        
+
             .footer-2 {
                 display: flex;
                 backdrop-filter: blur(5px);
@@ -342,17 +232,21 @@
                 border: $bordes;
                 flex-direction: row;
                 justify-content: space-around;
+
                 .conocenos {
                     width: 100%;
+
                     h3 {
                         color: beige;
                         width: 100%;
                         height: 100%;
                     }
+
                     .propietarios {
                         display: flex;
                         flex-direction: column;
                         width: 100%;
+
                         a {
                             color: beige;
                             text-decoration: none;
@@ -361,17 +255,21 @@
                         }
                     }
                 }
+
                 .contacto {
                     width: 100%;
+
                     h3 {
                         color: beige;
                         width: 100%;
                     }
+
                     .propietarios {
                         display: flex;
                         flex-direction: column;
                         justify-content: flex-start;
                         width: 100%;
+
                         .info {
                             color: beige;
                             width: 100%;
@@ -384,7 +282,6 @@
         }
     }
 }
-
 @media screen and (min-width: 1024px) {
     body {
         .encabezado {

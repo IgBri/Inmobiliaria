@@ -14,10 +14,52 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto repeat(6, 1fr);
+    grid-template-areas: 
+        "texto-bienvenida"
+        "servicio1"
+        "servicio2"
+        "servicio3"
+        "servicio4"
+        "servicio5"
+        "servicio6";
     gap: 20px;
     justify-items: center;
     .parrafo {
         display: none;
         grid-area: texto-bienvenida;
+    }
+    .servicio1 {
+        grid-area: servicio1;
+    }
+
+    .servicio2 {
+        grid-area: servicio2;
+    }
+
+    .servicio3 {
+        grid-area: servicio3;
+    }
+
+    .servicio4 {
+        grid-area: servicio4;
+    }
+
+    .servicio5 {
+        grid-area: servicio5;
+    }
+
+    .servicio6 {
+        grid-area: servicio6;
+    }
+    .card {
+        border: $bordes;
+        @extend %borde-card;
+        width: 85%;
+        .card-body {
+            @extend %font-text;
+        }
+        .card-title {
+            @extend %font-card;
+        }
     }
 }

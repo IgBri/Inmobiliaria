@@ -9,17 +9,23 @@
 
 /*MAIN de la pagina Quintas*/
 
-.grilla-pages-quintas-mobile {
+.grilla-pages-quintas {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "quinta1"
+        "quinta2"
+        "quinta3";
     justify-items: center;
     gap: 30px;
+    .parrafo {
+        @extend %parrafo;
+    }
     .card-q {
         width: 70%;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.75);
+        border: $bordes;
+        @extend %borde-card;
         background-color: white;
         img {
             width: 100%;
@@ -32,7 +38,18 @@
             }
         }
     }
-}
-.grilla-pages-quintas-desktop {
-    display: none;
+    .quinta1 {
+        grid-area: quinta1;
+        width: 80%;
+    }
+
+    .quinta2 {
+        grid-area: quinta2;
+        width: 80%;
+    }
+
+    .quinta3 {
+        grid-area: quinta3;
+        width: 80%;
+    }
 }

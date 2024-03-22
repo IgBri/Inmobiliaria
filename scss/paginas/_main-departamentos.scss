@@ -8,21 +8,33 @@
 }
 
 /*MAIN de la pagina Departamentos*/
-.main {
-    .grilla-pages-dptos-mobile {
+main {
+    .grilla-pages-dptos {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: auto repeat(4, 1fr);
         grid-template-areas:
+            "texto-bienvenida"
             "dpto1"
             "dpto2"
             "dpto3"
             "dpto4";
         justify-items: center;
-        width: 80%;
-
+        .parrafo {
+            @extend %parrafo;
+        }
         .card-pages {
             width: 80%;
+            border: $bordes;
+            @extend %borde-card;
+            .card-body {
+                .card-title {
+                    @extend %font-card;
+                }
+                .card-text {
+                    @extend %font-text;
+                }
+            }
         }
 
         .dpto1 {
@@ -40,8 +52,5 @@
         .dpto4 {
             grid-area: dpto4;
         }
-    }
-    .grilla-pages-dptos-desktop {
-        display: none;
     }
 }

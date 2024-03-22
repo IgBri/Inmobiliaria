@@ -16,13 +16,21 @@
     gap: 15px;
     justify-items: center;
     .parrafo {
-        display: none;
-        grid-area: texto-bienvenida;
+        @extend %parrafo;
     } 
     .card-pages {
         width: 75%;
+        border: $bordes;
+        @extend %borde-card;
+        .card-body {
+            height: auto;
+            .card-title {
+                @extend %font-card;
+            }
+            .card-text {
+                @extend %font-text;
+            }
+        }
     }
-    .card-body {
-        height: auto;
-    }
+    
 }
